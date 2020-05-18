@@ -5,3 +5,22 @@
 	font-family: $name
 	font-style: $style
 	font-weight: $weight
+
+$avenir: 'Avenir'
+
+@font-face
+  +fontdefault(normal, 400, $avenir)
+  +fontpath('Avenir', 'Avenir-Roman', Avenir-Roman)
+@font-face
+  +fontdefault(normal, 500, $avenir)
+  +fontpath('Avenir Medium', 'Avenir-Medium', Avenir-Medium)
+@font-face
+  +fontdefault(normal, 800, $avenir)
+  +fontpath('Avenir Heavy', 'Avenir-Heavy', Avenir-Heavy)
+@font-face
+  +fontdefault(normal, 900, $avenir)
+  +fontpath('Avenir Black', 'Avenir-Black', Avenir-Black)
+
+// @font-face
+//   +fontdefault(italic, 400, $avenir)
+//   +fontpath('', '', )

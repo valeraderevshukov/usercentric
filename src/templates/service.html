@@ -1,0 +1,52 @@
+---
+title: Service page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	{% include "partials/_header.html" %}
+	<div class="wrap wrap_pb0">
+		<div class="wrap__inner inner">
+			<article class="article" data-scroll-trigger>
+				<div class="article__row row" data-anim-group='0.1' data-delay-anim="0.1">
+					<div class="article__col col col-6 col-sm-12">
+						<h1 class="article__title-md title-md has-cube" data-anim="from-bottom">Westpac</h1>
+						<div class="article__text" data-anim="from-bottom">
+							<p>Your company’s website is often the first interaction your customers will have with you. Your company’s website is often the first interaction your customers will have with you.</p>
+						</div>
+						<div class="article__buttons" data-anim="from-bottom">
+							<a href="#" class="article__btn btn">HIRE US{{ mixins.icon('arr') }}</a>
+							<a href="#" class="article__btn btn-simle">GET IN TOUCH</a>
+						</div>
+					</div>
+					<div class="article__col col col-6 col-sm-12" data-anim="fade">
+						<div class="img-hero">
+							<img src="./img/img-hero.jpg" alt="img">
+						</div>
+					</div>
+				</div>
+				<div class="article__row row" data-anim-group='0.1' data-delay-anim="0.1">
+					<div class="article__col col col-6 col-sm-12">
+						<h4 class="article__titleinfo titleinfo" data-anim="from-bottom">WHAT WE DO</h4>
+						<h2 class="article__title title has-cube-dot" data-anim="from-bottom">Information</h2>
+						<div class="article__description" data-anim="from-bottom">Since 2014, UserCentric has been helping businesses use their websites to drive their digital strategy and growth. We offer new website builds, visual redesigns, andreplatforms onto modern CMS systems, including headless CMS where our clientswant to go cross-platform or handle large amounts of reusable content.</div>
+						<ul class="imagelist" data-anim="from-bottom">
+							{% for i in range(1,6) %}
+							<li><img src="./img/imagelist-{{i}}.svg" alt="imagelist"></li>
+							{% endfor %}
+						</ul>
+					</div>
+					<div class="article__col col col-6 col-sm-12" data-anim="from-bottom">
+						<p>With the CRP, Westpac has standardised its approach to detecting and resolving fraud and other misconduct breaches, and has ensured consistent follow up and closure of alerts, reporting integrity, and a full audit trail.</p>
+						<p>The CRP project originated as a lightweight project to serve a small number of low risk portfolios within the Financial Crime Management division. The tool was built in an agile manner allowing for a rapid deployment and iteration cycle.The high level of flexibility that the tool boasted quickly become the de-facto standard for risk alerting and UserCentric were involved in a joint effort together with Westpac in uplifting the tool to the highest level of their banking grade software - this involved.</p>
+						<p>The high level of flexibility that the tool boasted quickly become the de-facto standard for risk alerting and UserCentric were involved in a joint effort together with Westpac in uplifting the tool to the highest level of their banking grade software - this involved.</p>
+					</div>
+				</div>
+			</article>	
+		</div>
+	</div>
+	{% include "partials/_cases.html" %}
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

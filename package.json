@@ -64,5 +64,10 @@
     "through2": "^2.0.1",
     "webpack": "^2.2.1",
     "webpack-bundle-analyzer": "^1.5.3"
+  },
+  "dependencies": {
+    "gsap": "^2.0.2",
+    "isotope-layout": "^3.0.6",
+    "slick-carousel": "^1.8.1"
   }
 }

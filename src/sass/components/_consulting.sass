@@ -1,0 +1,52 @@
+.consulting
+	padding: 96px 0 80px
+	+md
+		padding: 50px 0
+	&__col
+		&:not(:last-child)
+			margin-bottom: 40px
+	&__wrap
+		max-width: 460px
+		+sm
+			max-width: 100%
+	&__titleinfo
+		margin-bottom: 35px
+	&__title
+		margin-bottom: 30px
+		+md
+			margin-bottom: 20px
+	&__footer
+		margin-top: 35px
+	&__concept
+		counter-reset: list
+	&__item
+		position: relative
+		padding-left: 70px
+		+md
+			padding-left: 44px
+		&:not(:last-child)
+			margin-bottom: 39px
+			+md
+				margin-bottom: 20px
+		&:before
+			position: absolute
+			top: 0
+			left: 0
+			counter-increment: list
+			content: counter(list)
+			+f(24px,900,1.375)
+			color: $black
+			opacity: 0.3
+		&:nth-of-type(-n+9)
+			&:before
+				content: '0'counter(list)
+	&__titlexs
+		margin-bottom: 24px
+		+md
+			margin-bottom: 15px
+	&__list
+		li
+			position: relative
+			display: block
+			&:before
+				content: '- '

@@ -1,0 +1,49 @@
+<!-- begin consulting -->
+<div class="consulting" data-scroll-trigger>
+	<div class="consulting__inner inner">
+		<div class="consulting__row row">
+			<div class="consulting__col col col-6 col-sm-12" data-anim-group='0.1' data-delay-anim="0.1">
+				<div class="consulting__wrap">
+					<h4 class="consulting__titleinfo titleinfo" data-anim="from-bottom">Consulting</h4>
+					<h2 class="consulting__title title has-cube-dot" data-anim="from-bottom">Build your digital strategy & take from concept to in-market</h2>
+					<p data-anim="from-bottom">UserCentric offers a unique blend of business consulting with deep software engineering expertise.</p>
+					<div class="consulting__footer" data-anim="from-bottom">
+						<a href="#" class="btn">LEARN MORE {{ mixins.icon('arr') }}</a>
+					</div>
+				</div>
+			</div>
+			<div class="consulting__col col col-6 col-sm-12" data-anim-group='0.1' data-delay-anim="0.1">
+				<div class="consulting__concept">
+					{% for section in [
+						{
+							title: 'Digital Strategy',
+							list: ['Customer value proposition', 'Omnichannel offering', 'Go-To-Market and growth']
+						},
+						{
+							title: 'UserExperienceDesign',
+							list: ['User journey mapping','Customer research and testing','User Experience and visual design']
+						},
+						{
+							title: 'Data Analytics',
+							list: ['Business model canvas & experiment design','“Smokescreen” testing','A/B testing & funnel optimisation']
+						},
+						{
+							title: 'Development',
+							list: ['Web and mobile platforms and applications','Technical architecture & application implementation','API platforms, systems integration, third-party integrations']
+						}
+					] %}    
+					<div class="consulting__item" data-anim="from-bottom">
+						<h3 class="consulting__titlexs title-xs">{{ section.title }}</h3>
+						<ul class="consulting__list">
+							{% for item in section.list %}
+								<li>{{ item }}</li>
+							{% endfor %}
+						</ul>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end consulting -->

@@ -1,0 +1,91 @@
+.hero
+	&__inner-lg
+		position: relative
+		padding: 166px 0
+		+md
+			padding: 100px 0
+		+sm
+			padding: 80px 0 50px
+	&__info
+		position: absolute
+		top: 0
+		left: 13px
+		width: 12px
+		height: 100vh
+		max-height: 100%
+		min-height: 560px
+		padding-bottom: 50px
+		font-size: 12px
+		line-height: 1
+		letter-spacing: 0.1em
+		text-transform: uppercase
+		flex-direction: column
+		justify-content: center
+		display: flex
+		+xl
+			display: none
+	&__info-title
+		margin: auto 0
+		color: rgba($black,.7)
+		transform: scale(-1) translateY(-156px)
+	&__info-text
+		position: relative
+		margin-top: auto
+		color: rgba($black,.2)
+		transform: scale(-1) 
+		&:before
+			position: absolute
+			content: ''
+			left: 50%
+			top: 100%
+			margin-top: 15px
+			height: 50px
+			width: 1px
+			background-color: rgba($black, .1)
+	&__info-title,
+	&__info-text
+		writing-mode: vertical-lr
+		white-space: nowrap
+	&__inner
+		align-items: center
+		display: flex
+		+sm
+			flex-direction: column-reverse
+	&__content
+		position: relative
+		margin-bottom: 8px
+		z-index: 1
+		width: 53%
+		+lg
+			width: 60%
+		+sm
+			width: 100%
+	&__title
+		margin-bottom: 16px
+	&__text
+		max-width: 343px
+	&__footer
+		margin-top: 27px
+	&__btn
+		&:not(:last-child)
+			margin-right: 36px
+			+sm
+				margin-right: 24px
+	&__img
+		position: relative
+		width: 47%
+		+lg
+			width: 40%
+		+sm
+			margin-bottom: 50px
+			width: 100%
+			justify-content: center
+			display: flex
+		img
+			margin: 9px -100px 0 12px
+			display: block
+			+md
+				margin: 0
+				max-width: 400px
+			+sm
+				max-width: 80%

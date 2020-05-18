@@ -1,1 +1,63 @@
-<p>Hello from partials/_header.html</p>
+<!-- begin header -->
+<header class="header js-header" data-scroll-trigger>
+	<div class="header__inner inner-lg" data-anim="from-top">
+		<div class="header__left">
+			<a href="/" class="logo-symbol">
+				<img src="./img/logo-symbol.svg" alt="Logo-symbol">
+			</a>
+		</div>
+		<div class="header__center">
+			<a href="/" class="logo">
+				<img src="./img/logo.svg" alt="Logo">
+			</a>
+		</div>
+		<div class="header__right">
+			<nav class="header__nav">
+				<ul class="menu" data-accordion-group>
+					<li class="menu__item is-active">
+						<a href="#">About</a>
+					</li>
+					<li class="menu__item" data-accordion-item data-accordion-on-init="1024">
+						<a href="#">Services</a>
+						<button class="menu__btn" type="button" data-accordion-trigger>{{ mixins.icon('arr') }}</button>
+						<ul class="submenu" data-accordion-container>
+							<li><a href="#">Westpac</a></li>
+							<li><a href="#">Zipmex</a></li>
+							<li><a href="#">PMCV</a></li>
+						</ul>
+					</li>
+					<li class="menu__item" data-accordion-item data-accordion-on-init="1024">
+						<a href="#">Case studios</a>
+						<button class="menu__btn" type="button" data-accordion-trigger>{{ mixins.icon('arr') }}</button>
+						<ul class="submenu" data-accordion-container>
+							<li><a href="#">Westpac</a></li>
+							<li><a href="#">Zipmex</a></li>
+							<li><a href="#">PMCV</a></li>
+						</ul>
+					</li>
+					<li class="menu__item">
+						<a href="#">Insights</a>
+					</li>
+					<li class="menu__item">
+						<a href="#">Blog</a>
+					</li>
+					<li class="menu__item">
+						<a href="#">Careers</a>
+					</li>
+				</ul>
+			</nav>
+			<ul class="header__soc soc">
+				<li class="soc__item"><a href="#">{{ mixins.icon('github') }}</a></li>
+				<li class="soc__item"><a href="#">{{ mixins.icon('twitter') }}</a></li>
+				<li class="soc__item"><a href="#">{{ mixins.icon('linkedin') }}</a></li>
+			</ul>
+		</div>
+
+		<button class="header__btn btn-menu js-btn-menu md-show">
+			<span class="btn-menu__line"></span>
+			<span class="btn-menu__line"></span>
+			<span class="btn-menu__line"></span>
+		</button>
+	</div>
+</header>
+<!-- end header -->

@@ -28,3 +28,15 @@
 </label>
 <!-- end input -->
 {% endmacro %}
+
+{% macro case(props) %}
+  <a href="#" class="case" data-scroll-trigger='20' data-anim='from-bottom'>
+    <div class="case__image-wrap">
+      <div class="case__image" style="background-image: url(./img/{{ props.image }});">
+      </div>
+    </div>
+    <div class="case__title title-sm">{{ props.title }}</div>
+    <div class="case__text">{{ props.text }}</div>
+    <span class="more">SEE CASE {{icon('arr')}}</span>
+  </a>
+{% endmacro %}

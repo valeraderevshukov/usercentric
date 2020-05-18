@@ -1,0 +1,23 @@
+<!-- begin clients -->
+<div class="clients text-center" data-scroll-trigger>
+	<div class="clients__inner inner" data-anim-group='0.1' data-delay-anim="0.1">
+		<h4 class="clients__titleinfo titleinfo" data-anim="from-bottom">OUR CLIENTS</h4>
+		<h2 class="clients__title title has-cube-dot" data-anim="from-bottom">We work with global brands</h2>
+		<div class="clients__description" data-anim="from-bottom">Governments, and VC-backed startups as their long-term, trusted digital partners</div>
+		<div class="clients__items">
+			{% for array in [
+				['clients-img-1','clients-img-2','clients-img-3','clients-img-4','clients-img-5'],
+				['clients-img-6','clients-img-7','clients-img-8'],
+				['clients-img-9','clients-img-10','clients-img-11','clients-img-12','clients-img-13']
+			] %}
+			<div class="clients__row">
+				{% for item in array %}
+				    <div class="clients__item" data-anim="from-bottom"><img src="./img/{{item}}.svg" alt="{{item}}"></div>
+				{% endfor %}
+			</div>
+			{% endfor %}
+			
+		</div>
+	</div>
+</div>
+<!-- end clients -->

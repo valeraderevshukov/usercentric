@@ -1,0 +1,47 @@
+{% set cases = [
+  {
+    image: "case-img-1.jpg",
+    title: "Westpac",
+    text: "Helping PMCV deliver workforce matching for the Victorian medical workforce."
+  },
+  {
+    image: "case-img-2.jpg",
+    title: "Zipmex",
+    text: "Helping PMCV deliver workforce matching for the Victorian medical workforce."
+  },
+  {
+    image: "case-img-3.jpg",
+    title: "PMCV",
+    text: "Helping PMCV deliver workforce matching for the Victorian medical workforce."
+  }
+] %}
+
+<div class="cases" data-scroll-trigger>
+  <div class="cases__inner inner">
+    <div class="cases__row row" data-anim-group='0.1' data-delay-anim="0.1">
+      <div class="cases__col col col-6 col-sm-12" data-anim="from-bottom">
+        <h4 class="cases__titleinfo titleinfo">WHAT WE DO</h4>
+        <h2 class="cases__title title has-cube-dot">Case Studies</h2>
+      </div>
+      <div class="cases__col col col-6 col-sm-12" data-anim="from-bottom">
+        <div class="cases__description">UserCentric builds mission-critical tools for government and enterprise clients who see digital as their competitive advantage.</div>
+      </div>
+    </div>
+    <div class="cases__wrap">
+      <div class="cases__container js-masonry">
+        {% for item in cases %}
+          <div class="cases__item js-masonry-item">
+            {{ mixins.case(item) }}
+          </div>
+        {% endfor %}
+        <div class="cases__item cases__item_text js-masonry-item text-center">
+          <div class="cases__item-wrap" data-scroll-trigger='20' data-anim='from-bottom'>
+            <div class="cases__title-info">Email us for your free digital strategy consultation.</div>
+            <a href="#" class="cases__btn btn">HIRE US{{ mixins.icon('arr') }}</a>
+          </div>
+        </div>
+        <div class="js-masonry-width"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,90 @@
+article,
+.article
+	img
+		max-width: 100%
+		display: block
+		&:not(:first-child)
+			margin-top: 65px
+			+sm
+				margin-top: 40px
+		&:not(:last-child)
+			margin-bottom: 65px
+			+sm
+				margin-bottom: 40px
+	p
+		&:not(:last-child)
+			margin-bottom: 35px
+			+sm
+				margin-bottom: 25px
+	.label
+		margin-bottom: 8px
+	&__topic
+		margin-bottom: 24px
+		align-items: center
+		+sm
+			margin-bottom: 10px
+	&__topic-col
+		height: 100%
+		display: flex
+		&:last-child
+			justify-content: center
+			+sm
+				justify-content: flex-start
+	&__col-disc
+		margin-top: 20px
+	&__row
+		&:not(:first-child)
+			margin-top: 112px
+			+sm
+				margin-top: 90px
+		&:not(:last-child)
+			margin-bottom: 112px
+			+sm
+				margin-bottom: 90px
+	&__col
+		&:not(:last-child)
+			+sm
+				margin-bottom: 30px
+	&__titleinfo
+		margin-bottom: 17px
+	&__title
+		margin-bottom: 31px
+	&__description
+		max-width: 470px
+		+f(20px, 400, 1.6)
+		color: rgba($black, .7)
+		+sm
+			max-width: 100%
+
+	&__text
+		max-width: 420px
+		+sm
+			max-width: 100%
+		&:not(:first-child)
+			margin-top: 20px
+	&__buttons
+		margin-top: 35px
+		+sm
+			margin-top: 20px
+	&__btn
+		&:not(:last-child)
+			margin-right: 40px
+			+sm
+				margin-right: 24px
+.img-hero
+	margin-right: -248px
+	+sm
+		margin-right: 0
+.imagelist
+	margin-top: 20px
+	display: flex
+	flex-wrap: wrap
+	li
+		margin-top: 20px
+		+sm
+			margin-top: 10px
+		&:not(:last-child)
+			margin-right: 40px
+			+sm
+				margin-right: 24px
+

@@ -1,0 +1,75 @@
+.footer
+	padding: 111px 0
+	font-size: 14px
+	line-height: 1.85
+	+md
+		padding-top: 50px
+	+sm
+		padding: 50px 0
+	&__left
+		width: 33.4%
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		+sm
+			width: 100%
+	&__center
+		width: 50%
+		+sm
+			display: none
+	&__right
+		width: 16.6%
+		+sm
+			display: none
+	&__logo
+		margin-bottom: 35px
+		vertical-align: top
+		display: inline-block
+		+sm
+			margin-bottom: 20px
+		img
+			width: 160px
+			max-width: 100%
+			display: block
+	&__description
+		margin-bottom: 25px
+		max-width: 264px
+		font-size: 12px
+		line-height: 1.9
+		+sm
+			margin-bottom: 10px
+			max-width: 100%
+	&__email
+		color: $blue
+		+tr(opacity)
+		+hover
+			opacity: .8
+	&__soc
+		&:not(:first-child)
+			margin-top: 41px
+	&__copy
+		margin-top: 15px
+	&__title
+		margin-bottom: 6px
+		+f(12px,900,1.2)
+		letter-spacing: 0.1em
+		color: $black
+	&__list
+		&:not(:last-child)
+			margin-bottom: 33px
+		.footer__center &
+			column-count: 2
+			column-gap: 66px
+			+md
+				column-gap: 30px
+		li
+			padding: 4px 0
+			&.is-active
+				a
+					color: rgba($black, .9)
+		a
+			+f(14px,400,1.857)
+			color: rgba($black, .5)
+			+tr(color)
+			+hover
+				color: rgba($black, .9)

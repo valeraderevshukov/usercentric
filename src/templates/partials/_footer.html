@@ -1,0 +1,49 @@
+<!-- begin footer -->
+<div class="footer">
+	<div class="footer__inner inner" data-scroll-trigger>
+		<div class="footer__row row">
+			<div class="footer__left col" data-anim-group='0.1' data-delay-anim="0.1">
+				<div class="footer__wrap">
+					<a href="#" class="footer__logo" data-anim="from-bottom">
+						<img src="./img/logo.svg" alt="logo">
+					</a>
+					<div class="footer__description" data-anim="from-bottom">Digital product design & development, we build products and services that make an impact. Lets make something great together.</div>
+					<a href="mailto:connect@usercentric.com.au" class="footer__email" data-anim="from-bottom">connect@usercentric.com.au</a>
+					<ul class="footer__soc soc" data-anim="from-bottom">
+						<li class="soc__item"><a href="#">{{ mixins.icon('github') }}</a></li>
+						<li class="soc__item"><a href="#">{{ mixins.icon('twitter') }}</a></li>
+						<li class="soc__item"><a href="#">{{ mixins.icon('linkedin') }}</a></li>
+					</ul>
+				</div>
+				<div class="footer__copy" data-anim="from-bottom">&copy; 2020 UserCentric</div>
+			</div>
+			<div class="footer__center col" data-anim-group='0.1' data-delay-anim="0.1">
+				<div class="footer__title" data-anim="from-bottom">TECHNICAL SERVICES</div>
+				<ul class="footer__list" data-anim="from-bottom">
+					{% for text in ['Frontend web development', 'React development', 'Vue development', 'Angular development', 'API platform development', 'Node.js platform development', 'Golang platform development', 'Database development', 'AWS & Azure cloud', 'Mobile development', 'iOS app development','Android app development','Flutter app development','React Native app development','Salesforce integrations','Kontent.ai implementations','PegaSystems BPM & RPA','Payment gateway integrations','User Interface design','UX design services','Software product development'] %}
+						{% if loop.index === 2 %}
+							<li class="is-active"><a href="#">{{ text }}</a></li>
+						{% else %}
+							<li><a href="#">{{ text }}</a></li>
+						{% endif %}
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="footer__right col" data-anim-group='0.1' data-delay-anim="0.1">
+				<div class="footer__title" data-anim="from-bottom">COMPANY</div>
+				<ul class="footer__list" data-anim="from-bottom">
+					{% for text in ['About', 'Careers', 'Blog', 'Insights'] %}
+					<li><a href="#">{{ text }}</a></li>
+					{% endfor %}
+				</ul>
+				<div class="footer__title" data-anim="from-bottom">CASE STUDIES</div>
+				<ul class="footer__list" data-anim="from-bottom">
+					{% for text in [ 'PMCV', 'NSW Treasury', 'Actevate', 'Wiise', 'Westpac'] %}
+					<li><a href="#">{{ text }}</a></li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end footer -->

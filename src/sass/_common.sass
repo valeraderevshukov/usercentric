@@ -1,4 +1,166 @@
-body
-	background: #FFF
-	line-height: 1.4
+html
+	&.is-overflow-hidden
+		+md
+			overflow-x: hidden
+			overflow-y: scroll
 
+body
+	color: $text
+	min-width: 320px
+	+f(18px,400,1.9)
+	font-family: $avenir
+	+font-smoothing
+	background-color: $white
+	+md
+		font-size: 16px
+		line-height: 1.5
+	.is-overflow-hidden &
+		+md
+			overflow: hidden
+			height: 100vh
+
+.title-lg,
+.title-md,
+.title,
+.title-sm,
+.title-xs
+	font-family: $avenir
+	font-weight: 900
+	color: $black
+
+.title-lg
+	position: relative
+	font-size: 70px
+	line-height: 1.1
+	+lg
+		font-size: 65px
+	+md
+		font-size: 50px
+	+sm
+		font-size: 34px
+	span
+		display: block
+
+.title-lg,
+.title-md
+	&.has-cube
+		padding-top: 43px
+		+md
+			padding-top: 0
+		&:before
+			position: absolute
+			content: ''
+			top: 0
+			left: 0
+			height: 11px
+			width: 11px
+			background-color: $black
+			+md
+				display: none
+
+.title-md
+	font-size: 60px
+	line-height: 1.36
+	+md
+		font-size: 40px
+.title
+	position: relative
+	font-size: 40px
+	line-height: 1.25
+	+md
+		font-size: 30px
+	&.has-cube-dot
+		&:after
+			content: ''
+			margin-left: 10px
+			height: 10px
+			width: 10px
+			background-color: $blue
+			display: inline-block
+.title-sm
+	font-size: 30px
+	line-height: 1.32
+.title-xs
+	font-size: 24px
+	line-height: 1.375
+
+.titleinfo
+	position: relative
+	z-index: 1
+	font-weight: 500
+	font-size: 14px
+	line-height: 19px
+	+f(14px,500,1.4)
+	text-align: center
+	text-transform: uppercase
+	letter-spacing: 0.1em
+	color: rgba($black, .5)
+	vertical-align: top
+	display: inline-block
+	&_mod
+		&:before,
+		&:after
+			display: none
+	&:before,
+	&:after
+		position: absolute
+		content: ''
+		top: 50%
+		left: 50%
+		z-index: -1
+		border-radius: 50%
+		border: 1px solid rgba(0, 0, 0, 0.05)
+		transform: translate(-50%,-50%)
+	&:before
+		height: 170px
+		width: 170px
+	&:after
+		height: 64px
+		width: 64px
+
+.blue
+	color: $blue
+
+.text-center
+	text-align: center
+
+.btn,
+.btn-simle,
+.more
+	+f(14px,800,1.36)
+	letter-spacing: 0.1em
+	text-transform: uppercase
+	font-family: $avenir
+	+tr(color,background-color, opacity)	
+	vertical-align: top
+	display: inline-block
+	.icon-arr
+		margin-left: 15px
+		margin-bottom: 1px
+		font-size: 7px
+		line-height: 1
+		+rotate(-90)
+.btn
+	padding: 10px 20px 9px 24px
+	color: $blue
+	border: 1px solid $blue
+	+hover
+		color: $white
+		background-color: $blue
+.btn-simle
+	padding: 10px 0 9px
+	color: $black
+	+hover
+		color: rgba($black, .6)
+.more
+	color: $blue
+	+hover
+		opacity: .8
+	.icon-arr
+		margin-left: 8px
+
+.label
+	text-transform: uppercase
+	letter-spacing: 0.1em
+	color: rgba($black, .3)
+	+f(14px,500,1.356)

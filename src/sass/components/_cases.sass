@@ -1,0 +1,95 @@
+.cases
+  padding: 110px 0 80px
+  +md
+    padding: 50px 0
+  &__titleinfo
+    margin-bottom: 35px
+  &__description
+    max-width: 471px
+    +sm
+      max-width: 100%
+  &__wrap
+    padding-right: 70px
+    +md
+      padding-right: 0
+    &:not(:first-child)
+      margin-top: 108px
+      +sm
+        margin-top: 70px
+  &__container
+    position: relative
+    transition: opacity $tr, visibility $tr
+    margin: 0 -50px
+    +md
+      margin: 0 -30px
+  &__item
+    padding: 0 50px
+    width: 50%
+    +md
+      padding: 0 30px
+    &:not(:first-child)
+      padding-top: 100px
+      +sm
+        padding-top: 50px
+    &:nth-child(2)
+      padding-top: 145px
+      +sm
+        padding-top: 50px
+    +sm
+      width: 100%
+    &_text
+      padding: 117px 0
+      align-items: center
+      justify-content: center
+      display: flex
+      &:not(:first-child)
+        padding-top: 204px
+  &__item-wrap
+    max-width: 295px
+  &__title-info
+    margin-bottom: 29px
+    +f(30px,400,1.6)
+    color: $black
+  &__col
+    &:not(:last-child)
+      +sm
+        margin-bottom: 20px
+
+.case
+  color: $text
+  display: block
+  +hover
+    .case__image-wrap
+      transform: scale(0.97)
+    .case__image
+      transform: scale(1.1)
+  &__image-wrap
+    margin-bottom: 50px
+    overflow: hidden
+    +tr(transform)
+    backface-visibility: hidden
+    +sm
+      margin-bottom: 20px
+  &__image
+    +tr(transform)
+    padding-bottom: 86%
+    background-size: cover
+    background-position: center
+    img
+      max-width: 100%
+      display: block
+  &__title
+    margin-bottom: 22px
+    +sm
+      margin-bottom: 15px
+  &__text
+    max-width: 378px
+    &:not(:last-child)
+      margin-bottom: 28px
+      +sm
+        margin-bottom: 20px
+
+.js-masonry-width
+  width: 50%
+  +sm
+    width: 100%
