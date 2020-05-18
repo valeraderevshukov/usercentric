@@ -14,48 +14,494 @@
   <body>
     <!-- BEGIN content -->
     <div class="out">
-      <h1>Index page</h1>
-      <p>Hello from partials/_header.html</p>
-      <svg class="icon icon-facebook">
-        <use xlink:href="img/sprite.svg#icon-facebook"></use>
-      </svg>
-      <p>
-        <!-- begin input -->
-        <label class="checkbox">
-          <input type="checkbox" name="checkbox">
-          <span class="checkbox__text">checkbox</span>
-        </label>
-        <!-- end input -->
-      </p>
-      <p>
-        <!-- begin input -->
-        <label class="checkbox">
-          <input type="checkbox" name="exemple-name" checked>
-          <span class="checkbox__text">checkbox-checked</span>
-        </label>
-        <!-- end input -->
-      </p>
-      <!-- begin input -->
-      <label class="radio">
-        <input type="radio" name="exemple-name">
-        <span class="radio__text">text</span>
-      </label>
-      <!-- end input -->
-      <!-- begin breadcrumbs -->
-      <ul class="breadcrumbs">
-        <li class="breadcrumbs__item">
-          <a href="#">Главная</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <a href="#">Внутренняя</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <span>Корзина</span>
-        </li>
-      </ul>
-      <!-- end breadcrumbs -->
-      <li>Item1</li>
-      <li>Item2</li>
+      <!-- begin header -->
+      <header class="header js-header" data-scroll-trigger>
+        <div class="header__inner inner-lg" data-anim="from-top">
+          <div class="header__left">
+            <a href="/" class="logo-symbol">
+              <img src="./img/logo-symbol.svg" alt="Logo-symbol">
+            </a>
+          </div>
+          <div class="header__center">
+            <a href="/" class="logo">
+              <img src="./img/logo.svg" alt="Logo">
+            </a>
+          </div>
+          <div class="header__right">
+            <nav class="header__nav">
+              <ul class="menu" data-accordion-group>
+                <li class="menu__item is-active">
+                  <a href="#">About</a>
+                </li>
+                <li class="menu__item" data-accordion-item data-accordion-on-init="1024">
+                  <a href="#">Services</a>
+                  <button class="menu__btn" type="button" data-accordion-trigger>
+                    <svg class="icon icon-arr">
+                      <use xlink:href="img/sprite.svg#icon-arr"></use>
+                    </svg>
+                  </button>
+                  <ul class="submenu" data-accordion-container>
+                    <li><a href="#">Westpac</a></li>
+                    <li><a href="#">Zipmex</a></li>
+                    <li><a href="#">PMCV</a></li>
+                  </ul>
+                </li>
+                <li class="menu__item" data-accordion-item data-accordion-on-init="1024">
+                  <a href="#">Case studios</a>
+                  <button class="menu__btn" type="button" data-accordion-trigger>
+                    <svg class="icon icon-arr">
+                      <use xlink:href="img/sprite.svg#icon-arr"></use>
+                    </svg>
+                  </button>
+                  <ul class="submenu" data-accordion-container>
+                    <li><a href="#">Westpac</a></li>
+                    <li><a href="#">Zipmex</a></li>
+                    <li><a href="#">PMCV</a></li>
+                  </ul>
+                </li>
+                <li class="menu__item">
+                  <a href="#">Insights</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#">Blog</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#">Careers</a>
+                </li>
+              </ul>
+            </nav>
+            <ul class="header__soc soc">
+              <li class="soc__item"><a href="#">
+                  <svg class="icon icon-github">
+                    <use xlink:href="img/sprite.svg#icon-github"></use>
+                  </svg>
+                </a></li>
+              <li class="soc__item"><a href="#">
+                  <svg class="icon icon-twitter">
+                    <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a></li>
+              <li class="soc__item"><a href="#">
+                  <svg class="icon icon-linkedin">
+                    <use xlink:href="img/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a></li>
+            </ul>
+          </div>
+          <button class="header__btn btn-menu js-btn-menu md-show">
+            <span class="btn-menu__line"></span>
+            <span class="btn-menu__line"></span>
+            <span class="btn-menu__line"></span>
+          </button>
+        </div>
+      </header>
+      <!-- end header -->
+      <!-- begin hero.html -->
+      <div class="hero" data-scroll-trigger>
+        <div class="hero__inner-lg inner-lg">
+          <div class="hero__info" data-anim-group='0.1' data-delay-anim="0.6">
+            <div class="hero__info-title" data-anim="from-left">ABOUT US</div>
+            <div class="hero__info-text" data-anim="from-left">SCROLL</div>
+          </div>
+          <div class="hero__inner inner">
+            <div class="hero__content" data-anim-group='0.1' data-delay-anim="0.2">
+              <h1 class="hero__title title-lg has-cube" data-anim="from-bottom">Delivery Focused.<span class="blue">Creatively Driven.</span></h1>
+              <div class="hero__text" data-anim="from-bottom">We deliver digital products that transform businesses and markets.</div>
+              <div class="hero__footer" data-anim="from-bottom">
+                <a href="#" class="hero__btn btn">HIRE US <svg class="icon icon-arr">
+                    <use xlink:href="img/sprite.svg#icon-arr"></use>
+                  </svg>
+                </a>
+                <a href="#" class="hero__btn btn-simle">GET IN TOUCH</a>
+              </div>
+            </div>
+            <div class="hero__img" data-anim-group='0.1' data-delay-anim="0.01">
+              <img src="./img/hero-img.svg" alt="hero-img" data-anim="fade">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end hero.html -->
+      <!-- begin service -->
+      <div class="service">
+        <div class="service__inner inner js-sliders" data-scroll-trigger>
+          <div class="service__sliderimg" data-anim-group='0.1' data-delay-anim="0.01">
+            <div class="sliderimg js-slider-img">
+              <div class="sliderimg__slide"><img src="./img/slider-img.jpg" alt="slider-img" data-anim="from-bottom"></div>
+              <div class="sliderimg__slide"><img src="./img/slider-img.jpg" alt="slider-img" data-anim="from-bottom"></div>
+              <div class="sliderimg__slide"><img src="./img/slider-img.jpg" alt="slider-img" data-anim="from-bottom"></div>
+              <div class="sliderimg__slide"><img src="./img/slider-img.jpg" alt="slider-img" data-anim="from-bottom"></div>
+              <div class="sliderimg__slide"><img src="./img/slider-img.jpg" alt="slider-img" data-anim="from-bottom"></div>
+            </div>
+          </div>
+          <div class="service__slidernav" data-anim-group='0.1' data-delay-anim="0.1">
+            <div class="service__topic" data-anim="from-bottom">
+              <div class="service__name">SERVICES</div>
+              <div class="service__counter js-slider-nav-counter"></div>
+            </div>
+            <div class="slidernav js-slider-nav" data-anim="from-bottom">
+              <div class="slidernav__slide">
+                <h2 class="slidernav__title title">Web Application Development</h2>
+                <div class="slidernav__text">UserCentric builds mission-critical tools for government and enterprise clients who see digital as their competitive advantage. We leverage a modern best of breed technology stack and new techniques in AI to create world class platforms that power web, mobile and voice apps.</div>
+                <div class="slidernav__footer">
+                  <a href="#" class="more">READ MORE <svg class="icon icon-arr">
+                      <use xlink:href="img/sprite.svg#icon-arr"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="slidernav__slide">
+                <h2 class="slidernav__title title">Web Application Development</h2>
+                <div class="slidernav__text">UserCentric builds mission-critical tools for government and enterprise clients who see digital as their competitive advantage. We leverage a modern best of breed technology stack and new techniques in AI to create world class platforms that power web, mobile and voice apps.</div>
+                <div class="slidernav__footer">
+                  <a href="#" class="more">READ MORE <svg class="icon icon-arr">
+                      <use xlink:href="img/sprite.svg#icon-arr"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="slidernav__slide">
+                <h2 class="slidernav__title title">Web Application Development</h2>
+                <div class="slidernav__text">UserCentric builds mission-critical tools for government and enterprise clients who see digital as their competitive advantage. We leverage a modern best of breed technology stack and new techniques in AI to create world class platforms that power web, mobile and voice apps.</div>
+                <div class="slidernav__footer">
+                  <a href="#" class="more">READ MORE <svg class="icon icon-arr">
+                      <use xlink:href="img/sprite.svg#icon-arr"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="slidernav__slide">
+                <h2 class="slidernav__title title">Web Application Development</h2>
+                <div class="slidernav__text">UserCentric builds mission-critical tools for government and enterprise clients who see digital as their competitive advantage. We leverage a modern best of breed technology stack and new techniques in AI to create world class platforms that power web, mobile and voice apps.</div>
+                <div class="slidernav__footer">
+                  <a href="#" class="more">READ MORE <svg class="icon icon-arr">
+                      <use xlink:href="img/sprite.svg#icon-arr"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="slidernav__slide">
+                <h2 class="slidernav__title title">Web Application Development</h2>
+                <div class="slidernav__text">UserCentric builds mission-critical tools for government and enterprise clients who see digital as their competitive advantage. We leverage a modern best of breed technology stack and new techniques in AI to create world class platforms that power web, mobile and voice apps.</div>
+                <div class="slidernav__footer">
+                  <a href="#" class="more">READ MORE <svg class="icon icon-arr">
+                      <use xlink:href="img/sprite.svg#icon-arr"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end service -->
+      <!-- begin whatwedo -->
+      <div class="whatwedo" data-scroll-trigger>
+        <div class="whatwedo__inner inner" data-anim-group='0.1' data-delay-anim="0.1">
+          <h4 class="whatwedo__titleinfo text-center" data-anim="from-bottom">
+            <div class="titleinfo">WHAT WE DO</div>
+          </h4>
+          <h2 class="whatwedo__title title text-center has-cube-dot" data-anim="from-bottom">How we can work with your teams</h2>
+          <div class="whatwedo__items row">
+            <div class="whatwedo__col col col-4 col-sm-12" data-anim="from-bottom">
+              <div class="whatwedo__wrap">
+                <div class="whatwedo__img"><img src="./img/whatwedo-img-1.svg" alt="img"></div>
+                <h4 class="whatwedo__title-sm">Integrate into existing teams</h4>
+                <p>Where you require specific capability augmentation for your team, UserCentric can deploy staff for an agreed period of time, based on an agreed daily rate.</p>
+              </div>
+              <div class="whatwedo__footer">
+                <a href="#" class="more">LEARN MORE <svg class="icon icon-arr">
+                    <use xlink:href="img/sprite.svg#icon-arr"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="whatwedo__col col col-4 col-sm-12" data-anim="from-bottom">
+              <div class="whatwedo__wrap">
+                <div class="whatwedo__img"><img src="./img/whatwedo-img-2.svg" alt="img"></div>
+                <h4 class="whatwedo__title-sm">Own a component of a program</h4>
+                <p>UserCentric will deliver a component of a wider program of work, for example the visual design, or front end build.</p>
+              </div>
+              <div class="whatwedo__footer">
+                <a href="#" class="more">LEARN MORE <svg class="icon icon-arr">
+                    <use xlink:href="img/sprite.svg#icon-arr"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="whatwedo__col col col-4 col-sm-12" data-anim="from-bottom">
+              <div class="whatwedo__wrap">
+                <div class="whatwedo__img"><img src="./img/whatwedo-img-3.svg" alt="img"></div>
+                <h4 class="whatwedo__title-sm">End-to-end project</h4>
+                <p>UserCentric takes full accountability for the project (including application delivery if required), having agreed the scoping with you up front.</p>
+              </div>
+              <div class="whatwedo__footer">
+                <a href="#" class="more">LEARN MORE <svg class="icon icon-arr">
+                    <use xlink:href="img/sprite.svg#icon-arr"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end whatwedo -->
+      <div class="cases" data-scroll-trigger>
+        <div class="cases__inner inner">
+          <div class="cases__row row" data-anim-group='0.1' data-delay-anim="0.1">
+            <div class="cases__col col col-6 col-sm-12" data-anim="from-bottom">
+              <h4 class="cases__titleinfo titleinfo">WHAT WE DO</h4>
+              <h2 class="cases__title title has-cube-dot">Case Studies</h2>
+            </div>
+            <div class="cases__col col col-6 col-sm-12" data-anim="from-bottom">
+              <div class="cases__description">UserCentric builds mission-critical tools for government and enterprise clients who see digital as their competitive advantage.</div>
+            </div>
+          </div>
+          <div class="cases__wrap">
+            <div class="cases__container js-masonry">
+              <div class="cases__item js-masonry-item">
+                <a href="#" class="case" data-scroll-trigger='20' data-anim='from-bottom'>
+                  <div class="case__image-wrap">
+                    <div class="case__image" style="background-image: url(./img/case-img-1.jpg);">
+                    </div>
+                  </div>
+                  <div class="case__title title-sm">Westpac</div>
+                  <div class="case__text">Helping PMCV deliver workforce matching for the Victorian medical workforce.</div>
+                  <span class="more">SEE CASE <svg class="icon icon-arr">
+                      <use xlink:href="img/sprite.svg#icon-arr"></use>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+              <div class="cases__item js-masonry-item">
+                <a href="#" class="case" data-scroll-trigger='20' data-anim='from-bottom'>
+                  <div class="case__image-wrap">
+                    <div class="case__image" style="background-image: url(./img/case-img-2.jpg);">
+                    </div>
+                  </div>
+                  <div class="case__title title-sm">Zipmex</div>
+                  <div class="case__text">Helping PMCV deliver workforce matching for the Victorian medical workforce.</div>
+                  <span class="more">SEE CASE <svg class="icon icon-arr">
+                      <use xlink:href="img/sprite.svg#icon-arr"></use>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+              <div class="cases__item js-masonry-item">
+                <a href="#" class="case" data-scroll-trigger='20' data-anim='from-bottom'>
+                  <div class="case__image-wrap">
+                    <div class="case__image" style="background-image: url(./img/case-img-3.jpg);">
+                    </div>
+                  </div>
+                  <div class="case__title title-sm">PMCV</div>
+                  <div class="case__text">Helping PMCV deliver workforce matching for the Victorian medical workforce.</div>
+                  <span class="more">SEE CASE <svg class="icon icon-arr">
+                      <use xlink:href="img/sprite.svg#icon-arr"></use>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+              <div class="cases__item cases__item_text js-masonry-item text-center">
+                <div class="cases__item-wrap" data-scroll-trigger='20' data-anim='from-bottom'>
+                  <div class="cases__title-info">Email us for your free digital strategy consultation.</div>
+                  <a href="#" class="cases__btn btn">HIRE US <svg class="icon icon-arr">
+                      <use xlink:href="img/sprite.svg#icon-arr"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="js-masonry-width"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- begin consulting -->
+      <div class="consulting" data-scroll-trigger>
+        <div class="consulting__inner inner">
+          <div class="consulting__row row">
+            <div class="consulting__col col col-6 col-sm-12" data-anim-group='0.1' data-delay-anim="0.1">
+              <div class="consulting__wrap">
+                <h4 class="consulting__titleinfo titleinfo" data-anim="from-bottom">Consulting</h4>
+                <h2 class="consulting__title title has-cube-dot" data-anim="from-bottom">Build your digital strategy & take from concept to in-market</h2>
+                <p data-anim="from-bottom">UserCentric offers a unique blend of business consulting with deep software engineering expertise.</p>
+                <div class="consulting__footer" data-anim="from-bottom">
+                  <a href="#" class="btn">LEARN MORE <svg class="icon icon-arr">
+                      <use xlink:href="img/sprite.svg#icon-arr"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="consulting__col col col-6 col-sm-12" data-anim-group='0.1' data-delay-anim="0.1">
+              <div class="consulting__concept">
+                <div class="consulting__item" data-anim="from-bottom">
+                  <h3 class="consulting__titlexs title-xs">Digital Strategy</h3>
+                  <ul class="consulting__list">
+                    <li>Customer value proposition</li>
+                    <li>Omnichannel offering</li>
+                    <li>Go-To-Market and growth</li>
+                  </ul>
+                </div>
+                <div class="consulting__item" data-anim="from-bottom">
+                  <h3 class="consulting__titlexs title-xs">UserExperienceDesign</h3>
+                  <ul class="consulting__list">
+                    <li>User journey mapping</li>
+                    <li>Customer research and testing</li>
+                    <li>User Experience and visual design</li>
+                  </ul>
+                </div>
+                <div class="consulting__item" data-anim="from-bottom">
+                  <h3 class="consulting__titlexs title-xs">Data Analytics</h3>
+                  <ul class="consulting__list">
+                    <li>Business model canvas &amp; experiment design</li>
+                    <li>“Smokescreen” testing</li>
+                    <li>A/B testing &amp; funnel optimisation</li>
+                  </ul>
+                </div>
+                <div class="consulting__item" data-anim="from-bottom">
+                  <h3 class="consulting__titlexs title-xs">Development</h3>
+                  <ul class="consulting__list">
+                    <li>Web and mobile platforms and applications</li>
+                    <li>Technical architecture &amp; application implementation</li>
+                    <li>API platforms, systems integration, third-party integrations</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end consulting -->
+      <!-- begin clients -->
+      <div class="clients text-center" data-scroll-trigger>
+        <div class="clients__inner inner" data-anim-group='0.1' data-delay-anim="0.1">
+          <h4 class="clients__titleinfo titleinfo" data-anim="from-bottom">OUR CLIENTS</h4>
+          <h2 class="clients__title title has-cube-dot" data-anim="from-bottom">We work with global brands</h2>
+          <div class="clients__description" data-anim="from-bottom">Governments, and VC-backed startups as their long-term, trusted digital partners</div>
+          <div class="clients__items">
+            <div class="clients__row">
+              <div class="clients__item" data-anim="from-bottom"><img src="./img/clients-img-1.svg" alt="clients-img-1"></div>
+              <div class="clients__item" data-anim="from-bottom"><img src="./img/clients-img-2.svg" alt="clients-img-2"></div>
+              <div class="clients__item" data-anim="from-bottom"><img src="./img/clients-img-3.svg" alt="clients-img-3"></div>
+              <div class="clients__item" data-anim="from-bottom"><img src="./img/clients-img-4.svg" alt="clients-img-4"></div>
+              <div class="clients__item" data-anim="from-bottom"><img src="./img/clients-img-5.svg" alt="clients-img-5"></div>
+            </div>
+            <div class="clients__row">
+              <div class="clients__item" data-anim="from-bottom"><img src="./img/clients-img-6.svg" alt="clients-img-6"></div>
+              <div class="clients__item" data-anim="from-bottom"><img src="./img/clients-img-7.svg" alt="clients-img-7"></div>
+              <div class="clients__item" data-anim="from-bottom"><img src="./img/clients-img-8.svg" alt="clients-img-8"></div>
+            </div>
+            <div class="clients__row">
+              <div class="clients__item" data-anim="from-bottom"><img src="./img/clients-img-9.svg" alt="clients-img-9"></div>
+              <div class="clients__item" data-anim="from-bottom"><img src="./img/clients-img-10.svg" alt="clients-img-10"></div>
+              <div class="clients__item" data-anim="from-bottom"><img src="./img/clients-img-11.svg" alt="clients-img-11"></div>
+              <div class="clients__item" data-anim="from-bottom"><img src="./img/clients-img-12.svg" alt="clients-img-12"></div>
+              <div class="clients__item" data-anim="from-bottom"><img src="./img/clients-img-13.svg" alt="clients-img-13"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end clients -->
+      <!-- begin workwithus -->
+      <div class="workwithus" data-scroll-trigger>
+        <div class="workwithus__inner inner">
+          <div class="workwithus__row row" data-anim-group='0.1' data-delay-anim="0.1">
+            <div class="workwithus__col col col-6 col-sm-12">
+              <div class="workwithus__titleinfo titleinfo titleinfo_mod" data-anim="from-bottom">WORK WITH US</div>
+              <div class="workwithus__title title has-cube-dot" data-anim="from-bottom">Let’s work together to build something great</div>
+              <div class="workwithus__footer" data-anim="from-bottom">
+                <a href="#" class="workwithus__btn btn">HIRE US <svg class="icon icon-arr">
+                    <use xlink:href="img/sprite.svg#icon-arr"></use>
+                  </svg>
+                </a>
+                <a href="#" class="workwithus__btn btn-simle">GET IN TOUCH</a>
+              </div>
+            </div>
+            <div class="workwithus__col col col-6 col-sm-12">
+              <div class="workwithus__img"><img src="./img/workwithus-img.svg" alt="workwithus-img" data-anim="fade"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end workwithus -->
+      <!-- begin footer -->
+      <div class="footer">
+        <div class="footer__inner inner" data-scroll-trigger>
+          <div class="footer__row row">
+            <div class="footer__left col" data-anim-group='0.1' data-delay-anim="0.1">
+              <div class="footer__wrap">
+                <a href="#" class="footer__logo" data-anim="from-bottom">
+                  <img src="./img/logo.svg" alt="logo">
+                </a>
+                <div class="footer__description" data-anim="from-bottom">Digital product design & development, we build products and services that make an impact. Lets make something great together.</div>
+                <a href="mailto:connect@usercentric.com.au" class="footer__email" data-anim="from-bottom">connect@usercentric.com.au</a>
+                <ul class="footer__soc soc" data-anim="from-bottom">
+                  <li class="soc__item"><a href="#">
+                      <svg class="icon icon-github">
+                        <use xlink:href="img/sprite.svg#icon-github"></use>
+                      </svg>
+                    </a></li>
+                  <li class="soc__item"><a href="#">
+                      <svg class="icon icon-twitter">
+                        <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                      </svg>
+                    </a></li>
+                  <li class="soc__item"><a href="#">
+                      <svg class="icon icon-linkedin">
+                        <use xlink:href="img/sprite.svg#icon-linkedin"></use>
+                      </svg>
+                    </a></li>
+                </ul>
+              </div>
+              <div class="footer__copy" data-anim="from-bottom">&copy; 2020 UserCentric</div>
+            </div>
+            <div class="footer__center col" data-anim-group='0.1' data-delay-anim="0.1">
+              <div class="footer__title" data-anim="from-bottom">TECHNICAL SERVICES</div>
+              <ul class="footer__list" data-anim="from-bottom">
+                <li><a href="#">Frontend web development</a></li>
+                <li class="is-active"><a href="#">React development</a></li>
+                <li><a href="#">Vue development</a></li>
+                <li><a href="#">Angular development</a></li>
+                <li><a href="#">API platform development</a></li>
+                <li><a href="#">Node.js platform development</a></li>
+                <li><a href="#">Golang platform development</a></li>
+                <li><a href="#">Database development</a></li>
+                <li><a href="#">AWS &amp; Azure cloud</a></li>
+                <li><a href="#">Mobile development</a></li>
+                <li><a href="#">iOS app development</a></li>
+                <li><a href="#">Android app development</a></li>
+                <li><a href="#">Flutter app development</a></li>
+                <li><a href="#">React Native app development</a></li>
+                <li><a href="#">Salesforce integrations</a></li>
+                <li><a href="#">Kontent.ai implementations</a></li>
+                <li><a href="#">PegaSystems BPM &amp; RPA</a></li>
+                <li><a href="#">Payment gateway integrations</a></li>
+                <li><a href="#">User Interface design</a></li>
+                <li><a href="#">UX design services</a></li>
+                <li><a href="#">Software product development</a></li>
+              </ul>
+            </div>
+            <div class="footer__right col" data-anim-group='0.1' data-delay-anim="0.1">
+              <div class="footer__title" data-anim="from-bottom">COMPANY</div>
+              <ul class="footer__list" data-anim="from-bottom">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Insights</a></li>
+              </ul>
+              <div class="footer__title" data-anim="from-bottom">CASE STUDIES</div>
+              <ul class="footer__list" data-anim="from-bottom">
+                <li><a href="#">PMCV</a></li>
+                <li><a href="#">NSW Treasury</a></li>
+                <li><a href="#">Actevate</a></li>
+                <li><a href="#">Wiise</a></li>
+                <li><a href="#">Westpac</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end footer -->
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
