@@ -100,11 +100,142 @@
 			width: 100%
 			justify-content: center
 			display: flex
-		img
-			margin: 9px -100px 0 12px
+		img,
+		svg
+			margin: 29px -120px 0 12px
 			display: block
 			+md
 				margin: 0
 				max-width: 400px
+				height: auto
 			+sm
 				max-width: 80%
+
+.hero-svg
+	position: relative
+	transition: transform .4s ease-out
+	&.is-animate
+		transform: translate(-20px,-20px)
+		transition-delay: .7s
+
+	&__logo-cube
+		stroke-dasharray: 500	
+		stroke-dashoffset: 500	
+		.hero-svg.is-animate &
+			animation: dashCube .5s linear forwards
+			animation-delay: .3s
+	&__logo-line
+		stroke-dasharray: 1800	
+		stroke-dashoffset: 1800	
+		.hero-svg.is-animate &
+			animation: dashLine .8s linear forwards
+	&__shadow
+		path,
+		polygon
+			transform: translate(-20px,-20px)
+			transition: transform .4s ease-out
+			.hero-svg.is-animate &
+				transform: translate(0,0)
+				transition-delay: .7s
+	&__clouds,
+	&__cube,
+	&__semicircles,
+	&__lines
+		path,
+		polygon
+			opacity: 0
+			transform: scale(.99)
+			transition: opacity .3s ease-out, transform  .3s ease-in-out
+			.hero-svg.is-animate &
+				opacity: 1
+				transform: scale(1)
+	&__clouds
+		path
+			$animation-delay: 0.9s
+			@for $i from 1 through 3
+				&:nth-child(#{$i})
+					.hero-svg.is-animate &
+						transition-delay: $animation-delay
+						$animation-delay: $animation-delay + .1s
+
+	&__cube
+		polygon
+			$animation-delay: 1.1s
+			@for $i from 1 through 3
+				&:nth-child(#{$i})
+					.hero-svg.is-animate &
+						transition-delay: $animation-delay
+						$animation-delay: $animation-delay + .12s
+	&__semicircles
+		path
+			$animation-delay: 1.3s
+			@for $i from 1 through 3
+				&:nth-child(#{$i})
+					.hero-svg.is-animate &
+						transition-delay: $animation-delay
+						$animation-delay: $animation-delay + .1s
+
+	&__lines
+		polygon
+			$animation-delay: 1.4s
+			@for $i from 1 through 6
+				&:nth-child(#{$i})
+					.hero-svg.is-animate &
+						transition-delay: $animation-delay
+						$animation-delay: $animation-delay + .11s
+
+	&__petals-third path,
+	&__petals-third polygon,
+	&__petals-first path,
+	&__petals-first polygon,
+	&__petals-second path,
+	&__petals-second polygon
+		opacity: 0
+		transition: opacity .3s ease-out, transform  .3s ease-in-out
+		transform-origin: center bottom
+		transform: scale(.99)
+		.hero-svg.is-animate &
+			opacity: 1
+			transform: scale(1)
+	&__petals-third path,
+	&__petals-third polygon
+		.hero-svg.is-animate &
+			transition-delay: 1.7s
+	&__petals-first path,
+	&__petals-first polygon
+		.hero-svg.is-animate &
+			transition-delay: 1.85s
+	&__petals-second path,
+	&__petals-second polygon
+		.hero-svg.is-animate &
+			transition-delay: 2s
+
+
+	&__person-bottom-right,
+	&__person-bottom-left,
+	&__person-top
+		opacity: 0
+		transition: opacity .4s ease-in-out
+		.hero-svg.is-animate &
+			opacity: 1
+	&__person-top
+		.hero-svg.is-animate &
+			transition-delay: 1.9s
+	&__person-bottom-left
+		.hero-svg.is-animate &
+			transition-delay: 2.2s
+	&__person-bottom-right
+		.hero-svg.is-animate &
+			transition-delay: 2.5s
+
+@keyframes dashLine
+	from
+		stroke-dashoffset: 1800
+	to
+		stroke-dashoffset: 0
+
+@keyframes dashCube
+	from
+		stroke-dashoffset: 500
+	to
+		stroke-dashoffset: 0
